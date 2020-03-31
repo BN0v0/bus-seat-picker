@@ -1,0 +1,44 @@
+body{
+    background-color:rgb(9, 16, 56);
+}
+
+.info-bord{
+    background-color:rgb(8, 14, 48);
+}
+.seat {
+    background-color: #444451;
+    height: 17px;
+    width: 40px;
+    margin: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.seat-booked {
+    background-color: #ffffff;
+    height: 17px;
+    width: 40px;
+    margin: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.seat-selected {
+    background-color: #7F87AE;
+    height: 17px;
+    width: 40px;
+    margin: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.bus{
+    height: 650px;
+    width: 300px;
+    border: 2px solid white;
+}
+
+.middle-row{
+    left: 0px;
+    margin-right: 140px;
+}
