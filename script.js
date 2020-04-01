@@ -7,6 +7,7 @@ var total_selected;
 var seats = document.getElementsByClassName('seat');
 var seats_booked = document.getElementsByClassName('seat-booked');
 var seats_selected = document.getElementsByClassName('seat-selected');
+var increment;
 
 function Init(){
     total_selected= getURLParameterValue("quantity");
@@ -36,14 +37,23 @@ function PopulateUI(){
 
      
             if(selected !== total_selected && validate == false){
-                if(e.target.classList.contains('seat') && !e.target.classList.contains('seat-booked')){
+                if(increment==true){
                     e.target.classList.toggle('seat-selected');
                     selected++;
-                }
-            }else{
-                if(e.target.classList.contains('seat-selected') && e.target.classList.contains('seat')){
+                    console.log(selected);
+
+                }else if(increment==false){
                     e.target.classList.toggle('seat-selected');
                     selected--;
+                    console.log(selected);
+
+                }
+            }else{
+                if(increment==false){
+                    e.target.classList.toggle('seat-selected');
+                    selected--;
+                    console.log(selected);
+
                 }
                 validate =false;
             }
@@ -54,16 +64,28 @@ function PopulateUI(){
 
 
 function validateSelection(e){
-
+    //Validate the selection
     if(selected >= total_selected){
        
         validate = true;
 
         if(!e.target.classList.contains('seat-selected')){
             alert("Only select "+total_selected+" seat, quantity previous selected!");
+        }else if(e.target.classList.contains('seat-selected')){
+            increment = false;
         }
         
+    }else{
+
+        if(e.target.classList.contains('seat') && !e.target.classList.contains('seat-booked') && !e.target.classList.contains('seat-selected')){
+            increment = true;
+        }else if(e.target.classList.contains('seat-selected') && !e.target.classList.contains('seat-booked')){
+            increment = false;
+        }
+
     }
+
+    return increment;
 }
 
 // GET URL parameters
