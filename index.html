@@ -1,236 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--Bootstrap-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-    <!-- Styling-->
-    <link rel="stylesheet" href="Style.css">
-
-    <!--iconfont-->
-    <link rel="stylesheet" type="text/css" href="icofont/icofont.min.css">
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--Bootstrap-->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  
+      <!-- Styling-->
+      <link rel="stylesheet" href="Style.css">
+  
+      <!--iconfont-->
+      <link rel="stylesheet" type="text/css" href="icofont/icofont.min.css">
+  
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bus Seat Picker</title>
 </head>
-<body data-gr-c-s-loaded="true">
+<body data-gr-c-s-loaded="true" style="height: 100vh;" >
 
-    <div class="container">
-        <!--Info Table-->
-        <h4 class="text-white text-center mt-5">Information</h4>
-        <div class="info-bord row my-1 mx-auto p-3 text-white rounded shadow w-50">
-            <div class="col text-center">
-                <div class="seat mx-auto"></div>
-                <h6>Seat</h6>
-            </div>
-            <div class="col text-center">
-                <div class="seat-booked mx-auto"></div>
-                <h6>Booked Seat</h6>
-            </div>
-            <div class="col text-center">
-                <div class="seat-selected mx-auto"></div>
-                <h6>Selected Seat</h6>
-            </div>
-        </div>
-
-        <div class="text-center text-white mt-5">
+    <div class="container d-flex h-100" >
+        <form method="GET" action="picker.html" class="mx-auto text-white text-center align-self-center">
             <h5>Please select the number of seats:</h5>
-            <input class="rounded" type="number" id="quantity" name="quantity" min="1" max="53">
-        </div>
-        
-
-
-        <!--Bus-->
-        <div class="bus my-5 mx-auto rounded py-4 px-2">
-
-            <i class="icofont-steering text-white icofont-2x mx-3"></i>
-           
-            <div class="row mt-3">
-                <div class="col row mx-3 my-2">
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                </div>
-    
-                <div class=" col row mx-3 my-2">
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                </div>
-          
-            </div>
-
-            <div class="row">
-                <div class="col row mx-3 my-2">
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                </div>
-    
-                <div class=" col row mx-3 my-2">
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                </div>
-          
-            </div>
-
-            <div class="row">
-                <div class="col row mx-3 my-2">
-                    <div class="seat-booked"></div>
-                    <div class="seat"></div>
-                </div>
-    
-                <div class=" col row mx-3 my-2">
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                </div>
-          
-            </div>
-
-            <div class="row">
-                <div class="col row mx-3 my-2">
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                </div>
-    
-                <div class=" col row mx-3 my-2">
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                </div>
-          
-            </div>
-
-            <div class="row">
-                <div class="col row mx-3 my-2">
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                </div>
-    
-                <div class=" col row mx-3 my-2">
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                </div>
-          
-            </div>
-            
-            <!--Middle Rows no right seats-->
-            <div class="row middle-row">
-                <div class="col row mx-3 my-2">
-                    <div class="seat-booked"></div>
-                    <div class="seat"></div>
-                </div>
-            </div>
-
-            <div class="row middle-row">
-                <div class="col row mx-3 my-2">
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                </div>
-    
-            </div>
-
-            <!--End Off Middle Rows-->
-
-            <div class="row">
-                <div class="col row mx-3 my-2">
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                </div>
-    
-                <div class=" col row mx-3 my-2">
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                </div>
-          
-            </div>
-
-            <div class="row">
-                <div class="col row mx-3 my-2">
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                </div>
-    
-                <div class=" col row mx-3 my-2">
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                </div>
-          
-            </div>
-
-            <div class="row">
-                <div class="col row mx-3 my-2">
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                </div>
-    
-                <div class=" col row mx-3 my-2">
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                </div>
-          
-            </div>
-
-            <div class="row">
-                <div class="col row mx-3 my-2">
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                </div>
-    
-                <div class=" col row mx-3 my-2">
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                </div>
-          
-            </div>
-
-            <div class="row">
-                <div class="col row mx-3 my-2">
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                </div>
-    
-                <div class=" col row mx-3 my-2">
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                </div>
-          
-            </div>
-
-            <div class="row">
-                <div class="col row mx-3 my-2">
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                </div>
-    
-                <div class=" col row mx-3 my-2">
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                </div>
-          
-            </div>
-
-            <!--Last Row 5 seats-->
-            <div class="row mx-3 my-2">
-              
-                    <div class="seat mx-1"></div>
-                    <div class="seat mx-1"></div>
-               
-                    <div class="seat mx-2"></div>
-
-                    <div class="seat mx-1"></div>
-                    <div class="seat mx-1"></div>
-                
-          
-            </div>
-
-            
-        </div>
-
+            <input class="rounded p-1" type="number" id="quantity" name="quantity" min="1" max="53">
+            <input type="submit" class="btn btn-success m-5" value="Pick"/>
+        </form>
     </div>
+    
 
 
-      <!--Javascript-->
-      <script src="script.js"></script>
+    
 </body>
 </html>

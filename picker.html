@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!-- Styling-->
+    <link rel="stylesheet" href="Style.css">
+
+    <!--iconfont-->
+    <link rel="stylesheet" type="text/css" href="icofont/icofont.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Seat Picker</title>
+</head>
+<body data-gr-c-s-loaded="true">
+
+    <div class="container">
+        <!--Info Table-->
+        <h4 class="text-white text-center mt-5">Information</h4>
+        <div class="info-bord row my-1 mx-auto p-3 text-white rounded shadow w-50">
+            <div class="col text-center">
+                <div class="seat mx-auto"></div>
+                <h6>Seat</h6>
+            </div>
+            <div class="col text-center">
+                <div class="seat-booked mx-auto"></div>
+                <h6>Booked Seat</h6>
+            </div>
+            <div class="col text-center">
+                <div class="seat-selected mx-auto"></div>
+                <h6>Selected Seat</h6>
+            </div>
+        </div>
+
+       
+        <!--Bus-->
+        <div class="bus my-5 mx-auto rounded py-4 px-2">
+
+            <i class="icofont-steering text-white icofont-2x mx-3"></i>
+           
+            <div class="row mt-3">
+                <div class="col row mx-3 my-2">
+                    <div id="1" class="seat"></div>
+                    <div id="2" class="seat"></div>
+                </div>
+    
+                <div class=" col row mx-3 my-2">
+                    <div id="3" class="seat"></div>
+                    <div id="4" class="seat"></div>
+                </div>
+          
+            </div>
+
+            <div class="row">
+                <div class="col row mx-3 my-2">
+                    <div id="5" class="seat"></div>
+                    <div id="6" class="seat"></div>
+                </div>
+    
+                <div class=" col row mx-3 my-2">
+                    <div id="7" class="seat"></div>
+                    <div id="8" class="seat"></div>
+                </div>
+          
+            </div>
+
+            <div class="row">
+                <div class="col row mx-3 my-2">
+                    <div id="9" class="seat"></div>
+                    <div id="10" class="seat"></div>
+                </div>
+    
+                <div class=" col row mx-3 my-2">
+                    <div id="11" class="seat"></div>
+                    <div id="12" class="seat"></div>
+                </div>
+          
+            </div>
+
+            <div class="row">
+                <div class="col row mx-3 my-2">
+                    <div id="13" class="seat"></div>
+                    <div id="14" class="seat"></div>
+                </div>
+    
+                <div class=" col row mx-3 my-2">
+                    <div id="15" class="seat"></div>
+                    <div id="16" class="seat"></div>
+                </div>
+          
+            </div>
+
+            <div class="row">
+                <div class="col row mx-3 my-2">
+                    <div id="17" class="seat"></div>
+                    <div id="18" class="seat"></div>
+                </div>
+    
+                <div class=" col row mx-3 my-2">
+                    <div id="19" class="seat"></div>
+                    <div id="20" class="seat"></div>
+                </div>
+          
+            </div>
+            
+            <!--Middle Rows no right seats-->
+            <div class="row middle-row">
+                <div class="col row mx-3 my-2">
+                    <div id="21" class="seat"></div>
+                    <div id="22" class="seat"></div>
+                </div>
+            </div>
+
+            <div class="row middle-row">
+                <div class="col row mx-3 my-2">
+                    <div id="23" class="seat"></div>
+                    <div id="24" class="seat"></div>
+                </div>
+    
+            </div>
+
+            <!--End Off Middle Rows-->
+
+            <div class="row">
+                <div class="col row mx-3 my-2">
+                    <div id="25" class="seat"></div>
+                    <div id="26" class="seat"></div>
+                </div>
+    
+                <div class=" col row mx-3 my-2">
+                    <div id="27" class="seat"></div>
+                    <div id="28" class="seat"></div>
+                </div>
+          
+            </div>
+
+            <div class="row">
+                <div class="col row mx-3 my-2">
+                    <div id="29" class="seat"></div>
+                    <div id="30" class="seat"></div>
+                </div>
+    
+                <div class=" col row mx-3 my-2">
+                    <div id="31" class="seat"></div>
+                    <div id="32" class="seat"></div>
+                </div>
+          
+            </div>
+
+            <div class="row">
+                <div class="col row mx-3 my-2">
+                    <div id="33" class="seat"></div>
+                    <div id="34" class="seat"></div>
+                </div>
+    
+                <div class=" col row mx-3 my-2">
+                    <div id="35" class="seat"></div>
+                    <div id="36" class="seat"></div>
+                </div>
+          
+            </div>
+
+            <div class="row">
+                <div class="col row mx-3 my-2">
+                    <div id="37" class="seat"></div>
+                    <div id="38" class="seat"></div>
+                </div>
+    
+                <div class=" col row mx-3 my-2">
+                    <div id="39" class="seat"></div>
+                    <div id="40" class="seat"></div>
+                </div>
+          
+            </div>
+
+            <div class="row">
+                <div class="col row mx-3 my-2">
+                    <div id="41" class="seat"></div>
+                    <div id="42" class="seat"></div>
+                </div>
+    
+                <div class=" col row mx-3 my-2">
+                    <div id="43" class="seat"></div>
+                    <div id="44" class="seat"></div>
+                </div>
+          
+            </div>
+
+            <div class="row">
+                <div class="col row mx-3 my-2">
+                    <div id="45" class="seat"></div>
+                    <div id="46" class="seat"></div>
+                </div>
+    
+                <div class=" col row mx-3 my-2">
+                    <div id="47" class="seat"></div>
+                    <div id="48" class="seat"></div>
+                </div>
+          
+            </div>
+
+            <!--Last Row 5 seats-->
+            <div class="row mx-3 my-2">
+              
+                    <div id="49" class="seat mx-1"></div>
+                    <div id="50" class="seat mx-1"></div>
+               
+                    <div id="51" class="seat mx-2"></div>
+
+                    <div id="52" class="seat mx-1"></div>
+                    <div id="53" class="seat mx-1"></div>
+                
+          
+            </div>
+
+            
+        </div>
+
+    </div>
+
+
+      <!--Javascript-->
+      <script src="script.js"></script>
+</body>
+</html>
