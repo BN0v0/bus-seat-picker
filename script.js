@@ -81,6 +81,8 @@ function validateSelection(e){
             increment = true;
         }else if(e.target.classList.contains('seat-selected') && !e.target.classList.contains('seat-booked')){
             increment = false;
+        }else{
+            increment=null;
         }
 
     }
