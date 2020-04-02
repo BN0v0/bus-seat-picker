@@ -63,12 +63,17 @@ function PopulateUI(){
     })
 
 
+  /* #region  Final Seats Operations */
     function AddSelectedSeats(seat){
         final_selected_seats.push(seat);  
     }
-    function RemoveSelectedSeats(seat){
-        final_selected_seats.pop(seat);  
+    function RemoveSelectedSeats(value){
+        const index = final_selected_seats.indexOf(value);
+        if (index > -1) {
+         final_selected_seats.splice(index, 1);
+        }
     }
+  /* #endregion */
 
 
 function validateSelection(e){
@@ -133,6 +138,8 @@ function getURLParameterValue(parameter){
     }
     return value;
 }
+
+
 
 // Init process 
 Init();
