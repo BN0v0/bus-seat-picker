@@ -13,6 +13,10 @@
     <!--iconfont-->
     <link rel="stylesheet" type="text/css" href="icofont/icofont.min.css">
 
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bus Seat Picker</title>
@@ -21,25 +25,25 @@
 
     <div class="container">
         <!--Info Table-->
-        <h4 class="text-white text-center mt-5">Information</h4>
+        <h4 class="text-white text-center mt-5 words">Information</h4>
         <div class="info-bord row my-1 mx-auto p-3 text-white rounded shadow w-50">
             <div class="col text-center">
                 <div class="seat mx-auto"></div>
-                <h6>Seat</h6>
+                <h6 class="words mt-2">Seat</h6>
             </div>
             <div class="col text-center">
                 <div class="seat-booked mx-auto"></div>
-                <h6>Booked Seat</h6>
+                <h6 class="words mt-2">Booked Seat</h6>
             </div>
             <div class="col text-center">
                 <div class="seat-selected mx-auto"></div>
-                <h6>Selected Seat</h6>
+                <h6 class="words mt-2">Selected Seat</h6>
             </div>
         </div>
-
-       
+    
         <!--Bus-->
         <div class="bus my-5 mx-auto rounded py-4 px-2">
+                
 
             <i class="icofont-steering text-white icofont-2x mx-3"></i>
            
@@ -220,6 +224,12 @@
 
             
         </div>
+
+    </div>
+
+    <div class="container text-white text-center my-5">
+        <h3 class="words">Your seats:</h3>
+        <h4 id="f_seats"></h4>
 
     </div>
 

@@ -8,6 +8,7 @@ var seats = document.getElementsByClassName('seat');
 var seats_booked = document.getElementsByClassName('seat-booked');
 var seats_selected = document.getElementsByClassName('seat-selected');
 var increment;
+var final_selected_seats = [];
 
 function Init(){
     total_selected= getURLParameterValue("quantity");
@@ -35,32 +36,39 @@ function PopulateUI(){
 
         validateSelection(e);
 
-     
+ 
+
             if(selected !== total_selected && validate == false){
                 if(increment==true){
                     e.target.classList.toggle('seat-selected');
                     selected++;
-                    console.log(selected);
-
+                    AddSelectedSeats(e.srcElement.id);
                 }else if(increment==false){
                     e.target.classList.toggle('seat-selected');
                     selected--;
-                    console.log(selected);
+                    RemoveSelectedSeats(e.srcElement.id);
 
                 }
             }else{
                 if(increment==false){
                     e.target.classList.toggle('seat-selected');
                     selected--;
-                    console.log(selected);
-
+                    RemoveSelectedSeats(e.srcElement.id);
                 }
                 validate =false;
             }
         
+        document.getElementById("f_seats").innerHTML = final_selected_seats;
 
     })
 
+
+    function AddSelectedSeats(seat){
+        final_selected_seats.push(seat);  
+    }
+    function RemoveSelectedSeats(seat){
+        final_selected_seats.pop(seat);  
+    }
 
 
 function validateSelection(e){

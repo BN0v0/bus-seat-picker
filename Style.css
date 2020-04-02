@@ -42,3 +42,8 @@ body{
     left: 0px;
     margin-right: 140px;
 }
+
+.words{
+    font-family: 'Gotu', sans-serif;
+    font-weight: bold;
+}
